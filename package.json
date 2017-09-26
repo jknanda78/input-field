@@ -2,11 +2,12 @@
   "version": "0.0.1",
   "name": "@jsfoobar/input-field",
   "scripts": {
-    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "build": "preact build",
-    "serve": "preact build && preact serve",
     "dev": "preact watch",
     "esdoc": "./node_modules/.bin/esdoc",
+    "prepublish": "npm test",
+    "serve": "preact build && preact serve",
+    "start": "if-env NODE_ENV=production && npm run -s serve || npm run -s dev",
     "test": "eslint src && jest"
   },
   "repository": {

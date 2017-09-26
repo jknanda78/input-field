@@ -8,22 +8,6 @@ const {
 	func
 } = PropTypes;
 
-const AtomDesign = props => (
-	<div>
-		<p>atom design</p>
-		<label for={props.name}>{props.label}</label>
-		{props.children}
-	</div>
-);
-
-const VaultDesign = props => (
-	<div>
-		<p>vault design</p>
-		<label for={props.name}>{props.label}</label>
-		{props.children}
-	</div>
-);
-
 /**
  * InputField class (UI component) with basic input field features
  */
@@ -36,7 +20,7 @@ class InputField extends Component {
 	  const { onClick } = this.props;
 
 	  if (onClick) {
-	    onClick();
+	    onClick(e);
 	  }
 	}
 
@@ -52,13 +36,7 @@ class InputField extends Component {
 	render(props) {
 		return (
 			<div>
-				<AtomDesign {...props}>
-					<input  {...props} onClick={this.onClickHandler} />
-				</AtomDesign>
-
-				<VaultDesign {...props}>
-					<input  {...props} onClick={this.onClickHandler} />
-				</VaultDesign>
+				<input  {...props} onClick={this.onClickHandler} />
 			</div>
 		);
 	}
