@@ -35,9 +35,7 @@ class InputField extends Component {
 
 	render(props) {
 		return (
-			<div>
-				<input  {...props} onClick={this.onClickHandler} />
-			</div>
+			<input  {...props} onClick={this.onClickHandler} />
 		);
 	}
 }
