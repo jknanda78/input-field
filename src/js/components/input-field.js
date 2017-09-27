@@ -34,7 +34,7 @@ class InputField extends Component {
 	}
 
 	render(props) {
-		const { label, ...propsForInput } = props;
+		const { label, ...propsForInput } = props; // eslint-disable-line no-unused-vars
 
 		return (
 			<input {...propsForInput} onClick={this.onClickHandler} />

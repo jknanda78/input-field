@@ -6,7 +6,7 @@ const props = {
 	name: 'username',
 	label: 'Username',
 	onClick: e => {
-		window.console && console.log('InputField::Props::onClick', e);
+		console.log('InputField::Props::onClick', e); // eslint-disable-line no-console
 	}
 };
 
