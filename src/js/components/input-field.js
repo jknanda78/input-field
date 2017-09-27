@@ -34,8 +34,10 @@ class InputField extends Component {
 	}
 
 	render(props) {
+		const { label, ...propsForInput } = props;
+
 		return (
-			<input  {...props} onClick={this.onClickHandler} />
+			<input {...propsForInput} onClick={this.onClickHandler} />
 		);
 	}
 }

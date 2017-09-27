@@ -28,6 +28,7 @@
   "dependencies": {
     "esdoc": "^1.0.3",
     "esdoc-standard-plugin": "^1.0.0",
+    "postcss": "^6.0.0",
     "preact": "^8.2.5",
     "preact-compat": "^3.17.0",
     "preact-router": "^2.5.7"
