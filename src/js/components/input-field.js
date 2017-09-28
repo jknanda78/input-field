@@ -25,19 +25,123 @@ class InputField extends Component {
 	}
 
 	/**
+	 * @param {Event} e
+	 */
+	onChangeHandler = e => {
+	  const { onChange } = this.props;
+
+	  if (onChange) {
+	    onChange(e);
+	  }
+	}
+
+	/**
+	 * @param {Event} e
+	 */
+	onKeyUpHandler = e => {
+	  const { onKeyUp } = this.props;
+
+	  if (onKeyUp) {
+	    onKeyUp(e);
+	  }
+	}
+
+	/**
+	 * @param {Event} e
+	 */
+	onKeyDownHandler = e => {
+	  const { onKeyDown } = this.props;
+
+	  if (onKeyDown) {
+	    onKeyDown(e);
+	  }
+	}
+
+	/**
+	 * @param {Event} e
+	 */
+	onFocusHandler = e => {
+	  const { onFocus } = this.props;
+
+	  if (onFocus) {
+	    onFocus(e);
+	  }
+	}
+
+	/**
+	 * @param {Event} e
+	 */
+	onBlurHandler = e => {
+	  const { onBlur } = this.props;
+
+	  if (onBlur) {
+	    onBlur(e);
+	  }
+	}
+
+	/**
+	 * @param {Event} e
+	 */
+	onBlurHandler = e => {
+	  const { onBlur } = this.props;
+
+	  if (onBlur) {
+	    onBlur(e);
+	  }
+	}
+
+	/**
+	 * @param {Event} e
+	 */
+	onMouseUpHandler = e => {
+	  const { onMouseUp } = this.props;
+
+	  if (onMouseUp) {
+	    onMouseUp(e);
+	  }
+	}
+
+	/**
+	 * @param {Event} e
+	 */
+	onMouseDownHandler = e => {
+	  const { onMouseDown } = this.props;
+
+	  if (onMouseDown) {
+	    onMouseDown(e);
+	  }
+	}
+
+	/**
 	 * @param props
 	 */
 	constructor(props) {
 		super(props);
 
 		this.onClickHandler = this.onClickHandler.bind(this);
+		this.onChangeHandler = this.onChangeHandler.bind(this);
+		this.onKeyUpHandler = this.onKeyUpHandler.bind(this);
+		this.onKeyDownHandler = this.onKeyDownHandler.bind(this);
+		this.onFocusHandler = this.onFocusHandler.bind(this);
+		this.onBlurHandler = this.onBlurHandler.bind(this);
+		this.onMouseUpHandler = this.onMouseUpHandler.bind(this);
+		this.onMouseDownHandler = this.onMouseDownHandler.bind(this);
 	}
 
 	render(props) {
 		const { label, ...propsForInput } = props; // eslint-disable-line no-unused-vars
 
 		return (
-			<input {...propsForInput} onClick={this.onClickHandler} />
+			<input {...propsForInput}
+				onClick={this.onClickHandler}
+				onChange={this.onChangeHandler}
+				onKeyUp={this.onKeyUpHandler}
+				onKeyDown={this.onKeyDownHandler}
+				onFocus={this.onFocusHandler}
+				onBlur={this.onBlurHandler}
+				onMouseUp={this.onMouseUpHandler}
+				onMouseDown={this.onMouseDownHandler}
+			/>
 		);
 	}
 }
