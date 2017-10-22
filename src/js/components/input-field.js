@@ -112,22 +112,6 @@ class InputField extends Component {
 	  }
 	}
 
-	/**
-	 * @param props
-	 */
-	constructor(props) {
-		super(props);
-
-		this.onClickHandler = this.onClickHandler.bind(this);
-		this.onChangeHandler = this.onChangeHandler.bind(this);
-		this.onKeyUpHandler = this.onKeyUpHandler.bind(this);
-		this.onKeyDownHandler = this.onKeyDownHandler.bind(this);
-		this.onFocusHandler = this.onFocusHandler.bind(this);
-		this.onBlurHandler = this.onBlurHandler.bind(this);
-		this.onMouseUpHandler = this.onMouseUpHandler.bind(this);
-		this.onMouseDownHandler = this.onMouseDownHandler.bind(this);
-	}
-
 	render(props) {
 		const { label, ...propsForInput } = props; // eslint-disable-line no-unused-vars
 
